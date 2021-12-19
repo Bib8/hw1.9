@@ -2,10 +2,10 @@ package com.company;
 
         public class Book {
         private String bookName;
-        private String bookAuthor;
+        private Author bookAuthor;
         private int yearPublic;
 
-    public Book(String bookName, String bookAuthor, int yearPublic) {
+    public Book(String bookName, Author bookAuthor, int yearPublic) {
         this.bookName = bookName;
         this.bookAuthor = bookAuthor;
         this.yearPublic = yearPublic;
@@ -15,7 +15,7 @@ package com.company;
                 return bookName;
             }
 
-            public String getBookAuthor() {
+            public Author getBookAuthor() {
                 return bookAuthor;
             }
 
@@ -25,5 +25,14 @@ package com.company;
 
             public void setYearPublic(int yearPublic) {
                 this.yearPublic = yearPublic;
+            }
+
+            @Override
+            public String toString() {
+                return "Book{" +
+                        "bookName='" + bookName + '\'' +
+                        ", bookAuthor=" + bookAuthor +
+                        ", yearPublic=" + yearPublic +
+                        '}';
             }
         }
