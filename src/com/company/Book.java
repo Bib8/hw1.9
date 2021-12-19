@@ -1,6 +1,8 @@
 package com.company;
 
-        public class Book {
+import java.util.Objects;
+
+public class Book {
         private String bookName;
         private Author bookAuthor;
         private int yearPublic;
@@ -35,4 +37,19 @@ package com.company;
                         ", yearPublic=" + yearPublic +
                         '}';
             }
-        }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+        return getYearPublic() == book.getYearPublic() && getBookName().equals(book.getBookName()) && getBookAuthor().equals(book.getBookAuthor());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getBookName(), getBookAuthor(), getYearPublic());
+    }
+
+
+}
