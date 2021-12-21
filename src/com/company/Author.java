@@ -10,9 +10,18 @@ public class Author {
         this.authorFirstName = authorFirstName;
         this.authorLastName = authorLastName;
     }
-    @Override
+    /*@Override
     public String toString() {
         return getFullName();
+    }*/
+
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "authorFirstName='" + authorFirstName + '\'' +
+                ", authorLastName='" + authorLastName + '\'' +
+                '}';
     }
 
     @Override
